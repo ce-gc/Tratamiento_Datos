@@ -22,9 +22,10 @@ La configuración por defecto utiliza la estación **A Coruña (ID: 1387)**.
    ```
 
 2. **Instalar dependencias:**
-   Se recomienda utilizar el archivo `requirements.txt` incluido para instalar todas las librerías necesarias (`requests`, `python-dotenv`, `streamlit`, `pandas`, `plotly`) de una sola vez:
+   Se recomienda utilizar `uv` para gestionar el entorno y las librerías necesarias (`requests`, `python-dotenv`, `streamlit`, `pandas`, `plotly`):
    ```bash
-   pip install -r requirements.txt
+   uv venv
+   uv pip install -r requirements.txt
    ```
 
 3. **Variables de entorno:**
@@ -41,7 +42,7 @@ El sistema se compone de dos módulos principales:
 
 ### 1. Extracción de Datos (`aemet.py`)
 Este script descarga los datos de los últimos días y los almacena en una base de datos SQLite local.
-- **Ejecución**: `python aemet.py`
+- **Ejecución**: `uv run aemet.py`
 - **Resultado**: Crea o actualiza el archivo `aemet_coruña.db`.
 
 ### 2. Visualización Interactiva (`graficas.py`)
@@ -49,7 +50,7 @@ Dashboard desarrollado con Streamlit que procesa la base de datos para mostrar:
 - **Métricas principales**: Temperatura máxima absoluta, mínima y promedio del periodo.
 - **Gráficos interactivos**: Comparativa de barras y líneas de tendencia mediante Plotly.
 - **Explorador**: Acceso a la tabla completa de registros.
-- **Ejecución**: `streamlit run graficas.py`
+- **Ejecución**: `uv run streamlit run graficas.py`
 
 ---
 
