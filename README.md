@@ -22,11 +22,11 @@ La configuración por defecto utiliza la estación **A Coruña (ID: 1387)**.
    ```
 
 2. **Instalar dependencias:**
-   Se recomienda utilizar `uv` para gestionar el entorno y las librerías necesarias (`requests`, `python-dotenv`, `streamlit`, `pandas`, `plotly`):
+   Este proyecto utiliza `uv` para la gestión automática de dependencias. Solo necesitas ejecutar:
    ```bash
-   uv venv
-   uv pip install -r requirements.txt
+   uv sync
    ```
+   *Nota: `uv run` también instalará automáticamente lo necesario si el entorno no está listo.*
 
 3. **Variables de entorno:**
    Crea un archivo llamado `.env` en la raíz del proyecto y añade tu clave:
