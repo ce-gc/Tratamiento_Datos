@@ -1,46 +1,37 @@
-# 🌦️🌈✨ SUPER PROYECTO DE TRATAMIENTO DE DATOS METEOROLÓGICOS 🌡️🔥🚀✨
+# Sistema de Gestión de Temperaturas de A Coruña
 
-¡BIENVENIDO/A AL MEJOR SISTEMA DE GESTIÓN DE TEMPERATURAS DE **A CORUÑA**! 🌊🏙️💎 Disfruta de una experiencia meteorológica EXTREMA potenciada por Python y Streamlit. 🐍🚀🌈💥
+Este proyecto es un sistema para la obtención, almacenamiento y visualización de datos meteorológicos de la ciudad de A Coruña, utilizando la API oficial de la AEMET.
 
-## 🌟🚀 ¿QUÉ HACE ESTE INCREÍBLE Y MARAVILLOSO PROYECTO? 🌟🚀
+## Componentes del Proyecto
 
-Este repositorio galáctico está diseñado para:
-1. 📥 **DESCARGAR** AUTOMÁTICAMENTE los datos climáticos diarios de la **AEMET** usando su API oficial. 🛰️📡🌍💫
-2. 💾 **ALMACENAR** la información en una base de datos local súper robusta de **SQLite**. 🗄️💎🏛️🛡️
-3. 🧹 **LIMPIAR** y procesar los datos para que brillen más que la estrella Polar. ☀️🧼✨💎
-4. 📊 **VISUALIZAR** gráficas interactivas, dinámicas y coloridas que te dejarán sin palabras. 📈🔥🌈🎨🖼️
+1. **aemet.py**: Script para descargar los datos de temperaturas máximas diarias del último mes desde la API de AEMET y almacenarlos en una base de datos local SQLite (`aemet_coruña.db`).
+2. **graficas.py**: Aplicación con Streamlit para visualizar la evolución de la temperatura máxima diaria.
 
-## 🛠️⚙️ COMPONENTES DEL SISTEMA ⚙️🛠️
+## Instalación de Dependencias
 
-### 🛰️⚡ `aemet.py`
-El motor de extracción nuclear. 🚀🔋 Se conecta a la API de AEMET, pide los datos del último mes y los guarda con todo el amor del mundo en `aemet_coruña.db`. 🤖💖🛸🌌 ¡OJO CON LA API KEY! 🔑🤫🛡️
+Para la gestión de dependencias y ejecución del proyecto, se utiliza `uv`, un gestor rápido de proyectos y paquetes en Python.
 
-### 💎🏛️ `aemet_coruña.db`
-Tu santuario sagrado de datos. 🏯🏰 Aquí descansan las temperaturas máximas registradas día tras día en la ciudad de cristal. 💤🌡️🏙️💎
+Crea un entorno virtual e instala las dependencias necesarias:
 
-### 🎨📈 `graficas.py`
-¡LA MAGIA PURA! ✨🔮 Utiliza **Streamlit** y **Plotly** para crear un Dashboard de otro planeta. 📊🖼️🛸🪐 ¡Corregido y optimizado para mostrar la evolución mensual perfecta! 📅✅🚀
+```bash
+uv venv
+uv pip install requests python-dotenv streamlit pandas plotly
+```
 
-### 🧹👔 `limpieza_datos.py` 
-El mayordomo de élite del código. El encargado de que cada bit esté en su sitio. 👔✨🧤🧼
+(En Windows, puedes activar el entorno virtual creado usando `.venv\Scripts\activate`).
 
-## 🚀🔥 CÓMO PONERLO EN MARCHA (¡RÁPIDO!) 🔥🚀
+## Configuración y Ejecución
 
-1. 🎟️ Consigue tu API KEY en AEMET OpenData. 🔑✨
-2. 🤫 Crea un archivo `.env` con tu gran secreto: `API_KEY=tu_token_aqui`. 📝🛡️
-3. 🏃‍♂️💨 Descarga los datos: 
-   ```bash
-   python aemet.py
+1. Solicita una API KEY en AEMET OpenData.
+2. Crea un archivo `.env` en la raíz del proyecto y añade tu clíve de la siguiente manera:
    ```
-4. 🎈🌈 Lanza el dashboard espectacular: 
-   ```bash
-   streamlit run graficas.py
+   API_KEY=tu_token_aqui
    ```
-
-## 📈🎯 MEJORAS RECIENTES (¡TODO RECIÉN SALIDO DEL HORNO!) 🎯📈
-✅ **SOLUCIONADO**: Error de datos "por hora" que no existían. 🕒🚫🙌
-✅ **NUEVO**: Visualización completa de **Temperaturas Máximas del Mes**. 📅✅🔥
-✅ **NUEVO**: Métricas mensuales espectaculares para un análisis de alto nivel. 📊🎯💎
-
----
-¡Hecho con muchísima ilusión, pasión y muchísimos, muchísimos emojis por tu asistente de confianza! 🥳🙌🎉✨🔝🚀🔥🌈💖🌍💫🛰️💎📊📈✅
+3. Obtén los datos de la AEMET y guárdalos en la base de datos:
+   ```bash
+   uv run aemet.py
+   ```
+4. Lanza el dashboard interactivo para ver las gráficas:
+   ```bash
+   uv run streamlit run graficas.py
+   ```
