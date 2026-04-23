@@ -61,11 +61,11 @@ fig.update_layout(
     yaxis=dict(gridcolor='lightgrey')
 )
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 # Tabla de datos
 with st.expander("Ver datos completos"):
     st.dataframe(df[['fecha', 'tmax']].rename(columns={
         'fecha': 'Fecha',
         'tmax': 'Temp. máxima (°C)'
-    }), use_container_width=True)
+    }), width='stretch')
