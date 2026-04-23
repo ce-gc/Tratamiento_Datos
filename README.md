@@ -8,7 +8,6 @@ La configuración por defecto utiliza la estación **A Coruña (ID: 1387)**.
 
 ## Requisitos
 
-- **Python 3.13** o superior.
 - **API Key de AEMET**: Obtenible de forma gratuita en el [AEMET OpenData](https://opendata.aemet.es/).
 
 ---
@@ -66,7 +65,3 @@ La información se organiza en la tabla `temperaturas` con el siguiente esquema:
 | `tmax`     | REAL    | Temperatura máxima diaria (°C) |
 
 ---
-
-## Notas de Desarrollo
-- **Manejo de Datos**: El sistema está preparado para procesar los datos en fragmentos (chunks) para optimizar la memoria [cite: 2026-03-04].
-- **Gráficas**: Se recomienda usar el modo `x unified` en los gráficos de Plotly para una mejor lectura de las fechas.
