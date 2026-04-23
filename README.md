@@ -18,7 +18,7 @@ La configuración por defecto utiliza la estación **A Coruña (ID: 1387)**.
 1. **Clonar el repositorio:**
    ```bash
    git clone <url-del-repositorio>
-   cd aemetProyecto
+   cd Tratamiento_Datos
    ```
 
 2. **Instalar dependencias:**
