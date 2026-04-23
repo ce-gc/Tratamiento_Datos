@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🌦️🌡️ Proyecto de Tratamiento y Visualización de Datos Meteorológicos ☀️📊
 
 ¡Bienvenido/a al repositorio más ardiente (y refrescante) de toda la red! 🚀✨ Este espectacular proyecto ha sido diseñado para coger aburridos y caóticos datos textuales y convertirlos en **un dashboard asombroso y súper visual**. 🤩🔥 Si alguna vez has querido saber el calor que ha hecho en **Abanilla (Estación 7250C)** hora por hora, ¡este es tu lugar! 🌵🏜️🏖️
