@@ -83,4 +83,3 @@ Comando para ejecutar gráficas:
 ```bash
 streamlit run grafica.py
 ```
->>>>>>> 5170b7a6de6e07359999b09e85d7647325111eb2
