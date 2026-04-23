@@ -8,6 +8,15 @@ La configuración por defecto utiliza la estación **A Coruña (ID: 1387)**.
 
 ## Requisitos
 
+- **Herramienta uv**: Necesaria para la gestión de dependencias y ejecución.
+  - **Windows (PowerShell)**:
+    ```powershell
+    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
+  - **macOS/Linux**:
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
 - **API Key de AEMET**: Obtenible de forma gratuita en el [AEMET OpenData](https://opendata.aemet.es/).
 
 ---
